@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 //Checking if the user alredy loged in:
 if(!isset($_SESSION["logged_in"])){
   //if hasn't, will be send back to home-page:

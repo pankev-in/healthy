@@ -26,8 +26,18 @@ if(!isset($_SESSION["logged_in"])){
 
     <?php
       include("templets/navbar.php");
-      include("templets/sample_page_wrapper.php");
     ?>
+
+    <div id="page-wrapper">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Dashboard <small>Statistics</small></h1>
+        </div>
+      </div>
+
+    </div>
+
 
   </div>
 

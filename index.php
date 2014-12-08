@@ -14,7 +14,7 @@ if(isset($_SESSION["logged_in"])){
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Healthy | A Simple Health Tracker</title>
+	<title>HealthIE | A Simple Health Tracker</title>
 
 	<!-- Favicon -->
 	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
@@ -49,13 +49,13 @@ if(isset($_SESSION["logged_in"])){
 
 						<!-- logo -->
 						<div class="logo smooth-scroll">
-							<a href="#banner"><img id="logo" src="assets/img/logo.png" alt="Healthy"></a>
+							<a href="#banner"><img id="logo" src="assets/img/logo.png" alt="HealthIE"></a>
 						</div>
 
 						<!-- name-and-slogan -->
 						<div class="site-name-and-slogan smooth-scroll">
-							<div class="site-name"><a href="#banner">Healthy</a></div>
-							<div class="site-slogan">A Simple Health Tracker</div>
+							<div class="site-name"><a href="#banner">HealthIE</a></div>
+							<div class="site-slogan"> Just A Health Tracker</div>
 						</div>
 
 					</div>
@@ -120,8 +120,8 @@ if(isset($_SESSION["logged_in"])){
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 object-non-visible center" data-animation-effect="fadeIn">
-						<h1 class="text-center">This is <span>Healthy</span></h1>
-						<p class="lead text-center">A Simple Web-based <b>Diet|Fitness tracker</b>. Which can help you to improve
+						<h1 class="text-center">This is <span>HealthIE</span></h1>
+						<p class="lead text-center">A Web-based <b>daily activity-tracker</b>. Which can help you to improve
 							your body condition by constantly monitoring your diet and tracking you activities.
 						</p>
 						<p class="lead text-center">Scroll to <b>learn More</b></p>
@@ -143,9 +143,11 @@ if(isset($_SESSION["logged_in"])){
 				<div class="col-sm-8">
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 1</h4>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
+							<h4 class="media-heading">STEP 1: Setup</h4>
+							<p><b>HealthIE</b> is a simple web-based health tracker which can help you to track your daily
+							activity, diets and give you some advices to improve your body condition. Press
+							<u>Sign</u> button to sign up an account and <u>Login</u> with your email address.
+							<b>Easy right?</b></p>
 						</div>
 						<div class="media-right">
 							<i class="fa fa-cog"></i>
@@ -153,9 +155,10 @@ if(isset($_SESSION["logged_in"])){
 					</div>
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 2</h4>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
+							<h4 class="media-heading">STEP 2: Exercise</h4>
+							<p>Next step is go outside and run! You can do any kind of sport to train yourself.
+							All you need is to write down your daily training time on your phone. The rest will
+							be take cared by us. :)</p>
 						</div>
 						<div class="media-right">
 							<i class="fa fa-check"></i>
@@ -163,24 +166,26 @@ if(isset($_SESSION["logged_in"])){
 					</div>
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 3</h4>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
+							<h4 class="media-heading">STEP 3: Record</h4>
+							<p>After a hole day activity, it is time to tell healthIE what you have done!
+							Use the email address you sign to login to your account, go to <u>Add new</u>
+							 to add new records and review them in your <u>Dashboard</u>.</p>
 						</div>
 						<div class="media-right">
 							<i class="fa fa-desktop"></i>
 						</div>
 					</div>
+					<!--
 					<div class="media">
 						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 4</h4>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
-							<p>1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdefghijklmnopqrstuvwxyz</p>
+							<h4 class="media-heading">STEP 4: Share</h4>
+							<p>Feature comming soon ...</p>
 						</div>
 						<div class="media-right">
 							<i class="fa fa-users"></i>
 						</div>
 					</div>
+				-->
 				</div>
 				<div class="col-sm-2"></div>
 			</div>
@@ -232,7 +237,7 @@ if(isset($_SESSION["logged_in"])){
 			<div class="row">
 				<div class="col-sm-1"></div>
 				<div class="col-sm-10">
-					<form role="form" name="login_form" action="login.php" onsubmit="return login_validateForm()" method="post">
+					<form role="form" name="login_form" action="scripts/login.php" onsubmit="return login_validateForm()" method="post">
 						<div class="form-group">
 							<input type="email" name="login_email" id="login_email" class="form-control input-sm" placeholder="email">
 						</div>
@@ -260,7 +265,7 @@ if(isset($_SESSION["logged_in"])){
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-10">
-				<form role="form" name="register_form" action="register.php" onsubmit="return sign_validateForm()" method="post">
+				<form role="form" name="register_form" action="scripts/register.php" onsubmit="return sign_validateForm()" method="post">
 					<div class="form-group">
 						<input type="text" name="sign_first_name" id="sign_first_name" class="form-control input-sm" placeholder="First Name">
 					</div>
@@ -355,7 +360,7 @@ function sign_validateForm() {
 		return false;
 	}
 
-	else if (password_1.length<=5) {
+	else if (password_1.length<6 || !isNaN(password_1)) {
 		alert("Your Password is too Weak, plase choose a better one");
 		return false;
 	}

@@ -2,7 +2,7 @@
 ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Healthy | A Simple Health Tracker</title>
+  <title>HealthIE | A Simple Health Tracker</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
