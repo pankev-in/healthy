@@ -88,8 +88,6 @@ if(isset($_SESSION["logged_in"])){
 									<!-- Collect the nav links, forms, and other content for toggling -->
 									<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 										<ul class="nav navbar-nav navbar-right">
-											<li class="active"><a href="#banner">Home</a></li>
-											<li><a href="#how">How</a></li>
 											<li><a href="#" data-toggle="modal" data-target="#login" class="btn btn-success square-btn-adjust">Login</a></li>
 											<li><a href="#" data-toggle="modal" data-target="#sign" class="btn btn-primary square-btn-adjust">Sign</a></li>
 
@@ -132,85 +130,9 @@ if(isset($_SESSION["logged_in"])){
 	</div>
 	<!-- banner end -->
 
-	<!-- section start -->
-	<!-- ================ -->
-	<div class="section translucent-bg bg-image-1 blue">
-		<div class="container object-non-visible" data-animation-effect="fadeIn">
-			<h1 id="how"  class="text-center title">How does it work?</h1>
-			<div class="space"></div>
-			<div class="row">
-				<div class="col-sm-2"></div>
-				<div class="col-sm-8">
-					<div class="media">
-						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 1: Setup</h4>
-							<p><b>HealthIE</b> is a simple web-based health tracker which can help you to track your daily
-							activity, diets and give you some advices to improve your body condition. Press
-							<u>Sign</u> button to sign up an account and <u>Login</u> with your email address.
-							<b>Easy right?</b></p>
-						</div>
-						<div class="media-right">
-							<i class="fa fa-cog"></i>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 2: Exercise</h4>
-							<p>Next step is go outside and run! You can do any kind of sport to train yourself.
-							All you need is to write down your daily training time on your phone. The rest will
-							be take cared by us. :)</p>
-						</div>
-						<div class="media-right">
-							<i class="fa fa-check"></i>
-						</div>
-					</div>
-					<div class="media">
-						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 3: Record</h4>
-							<p>After a hole day activity, it is time to tell healthIE what you have done!
-							Use the email address you sign to login to your account, go to <u>Add new</u>
-							 to add new records and review them in your <u>Dashboard</u>.</p>
-						</div>
-						<div class="media-right">
-							<i class="fa fa-desktop"></i>
-						</div>
-					</div>
-					<!--
-					<div class="media">
-						<div class="media-body text-left">
-							<h4 class="media-heading">STEP 4: Share</h4>
-							<p>Feature comming soon ...</p>
-						</div>
-						<div class="media-right">
-							<i class="fa fa-users"></i>
-						</div>
-					</div>
-				-->
-				</div>
-				<div class="col-sm-2"></div>
-			</div>
-		</div>
-	</div>
-	<!-- section end -->
-
-	<!-- section start -->
-	<!-- ================ -->
-	<div class="default-bg space blue">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-					<h1 class="text-center">Start using <b>Now</b></h1>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- section end -->
-
 	<!-- footer start -->
 	<!-- ================ -->
 	<footer id="footer">
-
-
 		<!-- .subfooter start -->
 		<!-- ================ -->
 		<div class="subfooter">
@@ -276,18 +198,20 @@ if(isset($_SESSION["logged_in"])){
 						<input type="email" name="sign_email" id="sign_email" class="form-control input-sm" placeholder="Email Address">
 					</div>
 
-					<div class="row">
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<input type="password" name="sign_password" id="sign_password" class="form-control input-sm" placeholder="Password">
-							</div>
-						</div>
-						<div class="col-xs-6 col-sm-6 col-md-6">
-							<div class="form-group">
-								<input type="password" id="sign_password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
-							</div>
-						</div>
-					</div>
+					
+          <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" name="sign_password" id="sign_password" class="form-control input-sm" placeholder="Password">
+              </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6">
+              <div class="form-group">
+                <input type="password" id="sign_password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+              </div>
+            </div>
+          </div>
+
 
 					<input type="submit" value="Register" id="sign_button" class="btn btn-primary btn-block">
 				</form>
@@ -307,6 +231,19 @@ if(isset($_SESSION["logged_in"])){
 				<h3 style="color:white;">System</h3>
 			</div></br>
 			<h3 style="color:#5cb85c;">Thank you for your registration, please login</h3>
+		</br>
+	</br>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="fail_regist" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content" style="text-align:center;">
+			<div class="modal-header" style="background-color:red">
+				<h3 style="color:white;">System</h3>
+			</div></br>
+			<h3 style="color:red">This email address has already been registed</h3>
 		</br>
 	</br>
 </div>
@@ -393,6 +330,11 @@ function login_validateForm() {
 if(isset($_SESSION["just_regist"])){
 	echo "<script>$('#succsess_sign').modal('show');</script>";
 	unset($_SESSION["just_regist"]);
+}
+
+if(isset($_SESSION["already_regist"])){
+	echo "<script>$('#fail_regist').modal('show');</script>";
+	unset($_SESSION["already_regist"]);
 }
 
 if(isset($_SESSION["failed_login"])){

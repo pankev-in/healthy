@@ -19,9 +19,11 @@ if(!empty($_POST["login_email"])||!empty($_POST["login_password"])){
   $into="SELECT * FROM user WHERE email = '{$login_email}' AND Password = '{$login_pw}'";
   $result = mysql_query($into);
     if(mysql_num_rows($result)!=0){
+        $row = mysql_fetch_row($result);
         mysql_close($sqlConnection);
         $_SESSION["user_email"] = $login_email;
         $_SESSION["logged_in"] = "yes";
+        $_SESSION["user_id"] = $row[0];
 
         $url=MAIN_URL."/dashboard.php";
         header("Location: $url");

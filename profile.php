@@ -157,7 +157,7 @@ if(!isset($_SESSION["logged_in"])){
 
 
     </div>
-
+</div>
 
     <?php
     include("templets/incl_script.php");
